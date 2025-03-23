@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  color: white;
+  font-family: "Quantico", sans-serif;
+  height: 100vh;
+  display: block;
+  overflow: hidden; /* Prevent normal scrolling */
+  position: relative; /* Ensure stacking context for z-index */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  z-index: 10; /* Ensure header appears above the background and content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2px;
+}
+
+nav ul li {
+  display: inline;
+  position: relative;
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: light;
+  font-size: 12px;
+  padding: 10px;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #61dca3;
+}
+
+/* CONTACT DROPDOWN */
+.contact-container {
+  position: relative;
+}
+
+/* Contact Dropdown Styling */
+.contact-info {
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  text-align: right;
+  background: transparent;
+  border: 0px;
+  width: 100px; /* Compact width */
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* Hidden initially */
+  max-height: 0; /* Hidden initially */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Contact Links */
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  padding: 11px;
+  transition: background 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  background: transparent;
+  color: #61dca3;
+}
+
+/* Show Dropdown When Hovered */
+.contact-container:hover .contact-info,
+.contact-container:focus-within .contact-info {
+  opacity: 1;
+  max-height: 300px; /* Ensure it has enough space when revealed */
+}
+
+/* MAIN SECTION */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  padding: 0 5%;
+  position: relative; /* Ensure content stays above background */
+  z-index: 2; /* Ensure main content is above the background */
+}
+
+/* LEFT TEXT */
+.left {
+  text-align: left;
+  flex: 1;
+  margin-right: 20px;
+  z-index: 2; /* Make sure left text stays above canvas */
+}
+
+.left h2 {
+  font-size: 95px;
+  margin: -50px;
+  line-height: 0.6;
+}
+
+.cursive {
+  font-family: "Qwigley", cursive;
+  font-size: 200px;
+  font-weight: 450;
+}
+
+/* RIGHT TEXT */
+.right {
+  text-align: right;
+  flex: 1;
+  max-width: 20%;
+  margin-left: auto;
+  margin-top: 5vh;
+  z-index: 2; /* Ensure right text stays above canvas */
+}
+
+.right p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+footer {
+  position: fixed; /* Use fixed positioning so it stays at the bottom of the screen */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 30px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  z-index: 1000; /* Ensure footer is above everything else */
+  background: transparent; /* Optional: make it slightly transparent or solid */
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  z-index: 1000; /* Ensure text is above background */
+  color: white; /* Make sure the text is visible */
+}
+
+/* LOCAL TIME POSITION */
+.local-time {
+  font-size: 12px; /* Adjust font size as needed */
+  position: fixed; /* Fix it to a fixed position on the screen */
+  bottom: 0.5px; /* Position it 10px from the bottom */
+  left: 5px; /* Position it 10px from the left */
+  color: white; /* Ensure it's visible on dark backgrounds */
+  z-index: 1000; /* Make sure it appears on top of other content */
+  padding: 5px; /* Add padding around the text */
+}
