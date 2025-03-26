@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Developer</title>
+    <link rel="stylesheet" href="src/projects.styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="bg"></div>
+    <header>
+      <div class="logo"> <br /></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li class="contact-container">
+            <a href="#" class="contact-toggle">Contact</a>
+            <div class="contact-info">
+              <!--<a href="tel:+19073158399">(907) 315-8399</a>-->
+              <a href="mailto:addisontdobbs@gmail.com" target="_blank">Email</a>
+              <a href="https://www.instagram.com/addisontdobbs" target="_blank"
+                >Instagram</a
+              >
+              <a
+                href="https://www.linkedin.com/in/addisontdobbs"
+                target="_blank"
+                >LinkedIn</a
+              >
+              <a href="https://www.github.com/addisontdobbs" target="_blank"
+                >Github</a
+              >
+              <a href="Official.Resume.pdf" download>Download My Resume</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+          
+    <!-- Projects Section -->
+    <div id="projects-section" class="projects-section">
+      
+        <h2 class="projects-heading">PROJECTS</h2>
+
+        <div class="wiki-box">
+          <p>Each project showcases different aspects of my development skills, ranging from front-end design to backend logic. Click on a project to learn more!</p>
+        </div>
+        
+        <div class="projects-list">
+          <div class="project-item">
+            <span>[ 01-1 ]</span> <span>PORTFOLIO</span>
+          </div>
+          <div class="project-item">
+            <span>[ 01-2 ]</span> <span> SCRAMBLE TEXT ANIMATION</span>
+          </div>
+          <div class="project-item">
+            <span>[ 02-1 ]</span> <span>NUMBER GUESSING GAME</span></div>
+          <div class="project-item">
+            <span>[ 02-2 ]</span> <span>WEATHER APP</span>
+          </div>
+          <div class="project-item">
+            <span>[ 02-3 ]</span> <span>PERSONAL EXPENSE TRACKER</span>
+          </div>
+          <div class="project-item">
+            <span>[ 02-4 ]</span> <span>AI CHATBOT</span>
+          </div>
+          <div class="project-item">
+            <span>[ 03-1 ]</span> <span>SIMPLE CALCULATOR</span>
+          </div>
+          <div class="project-item">
+            <span>[ 03-2 ]</span> <span>TO-DO LIST</span></div>
+          <div class="project-item">
+            <span>[ 03-3 ]</span> <span>BANK ACCOUNT MANAGEMENT SYSTEM</span>
+          </div>
+          <div class="project-item">
+            <span>[ 03-4 ]</span> <span>MULTITHREADED FILE DOWNLOADER</span>
+          </div>
+        </div>
+    </main>
+    
+
+    <clock>
+      <div class="local-time" id="local-time"></div>
+    </clock>
+    <footer>
+      <p>© 2025 ADDISON DOBBS</p>
+    </footer>
+
+    <script>
+      function updateTime() {
+        const options = {
+          timeZone: "America/Anchorage",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        };
+        const formatter = new Intl.DateTimeFormat("en-US", options);
+        document.getElementById("local-time").innerText =
+          "Local time (AKT): " + formatter.format(new Date());
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000); // Update every second
+    </script>
+  </body>
+</html>
