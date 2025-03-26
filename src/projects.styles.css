@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 3.5vh;
+  left: 10vh;
+  right: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+  position: relative; /* Important for dropdown */
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 12px;
+}
+
+nav ul li a:hover {
+  color: #61dca3;
+}
+
+/* CONTACT DROPDOWN */
+.contact-container {
+  position: relative;
+}
+
+/* Contact Dropdown Styling */
+.contact-info {
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  text-align: right;
+  background: transparent;
+  border: 0px;
+  width: 100px; /* Compact width */
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* Hidden initially */
+  max-height: 0; /* Hidden initially */
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Contact Links */
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  padding: 11px;
+  transition: background 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  background: #080808;
+  color: #61dca3;
+}
+
+/* Show Dropdown When Hovered */
+.contact-container:hover .contact-info,
+.contact-container:focus-within .contact-info {
+  opacity: 1;
+  max-height: 300px; /* Ensure it has enough space when revealed */
+}
+
+/* MAIN SECTION */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/*  ======== PROJECT SECTION ====== */
+.projects-section {
+  height: 100vh;
+  background-color: #080808;
+  color: white;
+  padding: 50px 30px; /* Adjust for top and bottom padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure content starts from the top */
+  align-items: flex-start; /* Align all content to the left */
+  width: 100%; /* Ensure it takes the full width */
+}
+
+/*  ======== TOP LEFT PROJECT HEADER ====== */
+.projects-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 8vh;
+  margin-top: 12vh; /* Move the header down */
+  margin-left: 13vh; /* Align it to the left */
+}
+
+/* Minimalist Wiki-style Box with Full Border */
+/* Minimalist Wiki-style Box with Full Border and Shadow */
+.wiki-box {
+  z-index: 5;
+  position: absolute;
+  top: 27vh; /* Align under title */
+  left: 11vh; /* Align with title */
+  width: 27%;
+  background: transparent; /* No background */
+  border: 2px solid white; /* Full border around the box */
+  padding: 10px 20px; /* Space inside */
+  font-size: 14px;
+  text-align: left;
+  height: 62vh;
+}
+
+/* Wiki Box Content */
+.wiki-box p {
+  text-align: center;
+  padding: auto;
+  padding-top: 5vh;
+  margin: 10px 0 0;
+  font-size: 15px;
+  color: #bbb; /* Softer gray text */
+  line-height: 1.4;
+}
+
+/* Adjust Projects List */
+.projects-list {
+  margin-left: 45%;
+}
+
+.projects-list {
+  width: 55%;
+  margin-left: auto; /* Pushes it to the right */
+  margin-right: 2vh; /* Adjust this for spacing from the right edge */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: calc(100vh - 200px);
+}
+
+/* Project items */
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Adjust alignment to center vertically */
+  border-bottom: 1.25px solid #555;
+  padding: 18px 0; /* Increased padding for more space */
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 0.95rem; /* Slightly larger font for better spacing */
+  width: 100%; /* Ensure the item extends across the entire width */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Number section (left aligned) */
+.project-item span:first-child {
+  text-align: left;
+  flex: 1;
+  padding-left: 10px; /* Add spacing from the left */
+}
+
+/* Project name section (right aligned) */
+.project-item span:last-child {
+  text-align: right;
+  flex: 1;
+  padding-right: 10px; /* Add spacing from the right */
+}
+
+/*  ======== PROJECT HOVER EFFECT ====== */
+.project-item:hover {
+  background: #61dca3;
+  color: black;
+  transition: background 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 2s ease-out, transform 0.75s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.75s ease-out;
+}
+
+/* FOOTER */
+clock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 30px;
+  font-size: 12px;
+  margin-bottom: 10px; /* Add space from the border */
+}
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 30px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+/* LOCAL TIME POSITION */
+.local-time {
+  font-size: 12px;
+  margin-bottom: -5px;
+  margin-left: -17px;
+  align-self: flex-start;
+}
