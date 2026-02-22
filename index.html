@@ -1079,8 +1079,8 @@
             </div>
             <div class="project-name">CPU Scheduling</div>
             <div class="project-desc">
-              Research project implementing and benchmarking FCFS, SJF, and Round
-              Robin algorithms.
+              Research project implementing and benchmarking FCFS, SJF, and
+              Round Robin algorithms.
             </div>
           </div>
           <div class="project-arrow">↗</div>
@@ -1281,20 +1281,26 @@
         togLabel.textContent = isDark ? "Light" : "Dark";
       });
 
-      /* PROJECT DATA — order matches card order: Portfolio, Earth Science, CPU, Text Animation */
+      /* PROJECT DATA
+       * Each project has two color values:
+       *   color      — used in dark mode (light pastels, readable on dark surfaces)
+       *   lightColor — used in light mode (deep/saturated equivalents, readable on light surfaces)
+       */
       const projects = [
         {
           name: "Portfolio Website",
           tags: ["HTML", "CSS", "JavaScript", "UI/UX"],
           color: "#a8e6cf",
+          lightColor: "#1a7a58",
           desc: "This very site was designed and built entirely from scratch as my custom personal portfolio. Features smooth scroll-triggered animations, a dark/light theme toggle with full CSS variable transitions, a custom dual-ring cursor, clickable project modals, and a reading progress bar. Focused on minimal, professional aesthetics with careful attention to typography and spacing. Templates on my Github!",
-          github: "https://github.com/addisontdobbs/",
+          github: "https://github.com/addisontdobbs/addisontdobbs.github.io/",
           demo: null,
         },
         {
           name: "Earth Science Web App",
           tags: ["Django", "PostgreSQL", "Leaflet.js", "Plotly", "Python"],
           color: "#c9f0a8",
+          lightColor: "#2e6e10",
           desc: "A full-stack research assistant project developed at the University of Alaska Anchorage. Designed and built a web-based application enabling earth scientists to collect field data through structured forms, store it in a PostgreSQL database, and visualize it through interactive Leaflet.js maps and Plotly charts. The app made spatial data exploration accessible to researchers and streamlined the data collection workflow.",
           github: "https://github.com/addisontdobbs",
           demo: null,
@@ -1303,6 +1309,7 @@
           name: "CPU Scheduling",
           tags: ["C++", "Research", "Algorithms", "Systems"],
           color: "#b3d4ff",
+          lightColor: "#1a4a99",
           desc: "A research project implementing and benchmarking three classic CPU scheduling algorithms: First Come First Served (FCFS), Shortest Job First (SJF), and Round Robin. This project simulates process queues, measures average wait time and turnaround time, and produces comparative analysis across different workload scenarios.",
           github: "https://github.com/addisontdobbs",
           demo: null,
@@ -1311,6 +1318,7 @@
           name: "Text Animation",
           tags: ["JavaScript", "CSS", "Animation", "Creative Coding"],
           color: "#ffd3a5",
+          lightColor: "#8a4800",
           desc: "An exploration of creative text animation techniques using vanilla JavaScript and CSS. The project experiments with keyframe sequences, staggered letter reveal effects, and motion to push what is possible with browser-native animation.",
           github: "https://github.com/addisontdobbs/Scramble-Text-Animation",
           demo: null,
@@ -1324,44 +1332,59 @@
       function openModal(idx) {
         const p = projects[idx];
         if (!p) return;
+
+        /* Pick the right color set based on the active theme */
+        const isLight =
+          document.documentElement.getAttribute("data-theme") === "light";
+        const activeColor = isLight ? p.lightColor : p.color;
+        /* Button label text is dark on light pastel backgrounds, white on deep dark ones */
+        const btnTextColor = isLight ? "#ffffff" : "#0a0a0a";
+
         document.getElementById("modal-header").innerHTML =
           '<div class="modal-img-placeholder" style="background:linear-gradient(135deg,' +
-          p.color +
-          '1a 0%,transparent 100%)">' +
+          activeColor +
+          "18 0%,transparent 100%)" +
+          '">' +
           "<span style=\"font-family:'Playfair Display',serif;font-size:72px;font-weight:700;color:" +
-          p.color +
-          ';opacity:0.25">' +
+          activeColor +
+          ';opacity:0.2">' +
           p.name[0] +
           "</span></div>";
+
         document.getElementById("modal-tags").innerHTML = p.tags
           .map(
             (t) =>
               '<span class="project-tag" style="border-color:' +
-              p.color +
+              activeColor +
               "55;color:" +
-              p.color +
+              activeColor +
               '">' +
               t +
               "</span>"
           )
           .join("");
+
         document.getElementById("modal-title").textContent = p.name;
-        document.getElementById("modal-title").style.color = p.color;
+        document.getElementById("modal-title").style.color = activeColor;
         document.getElementById("modal-desc").textContent = p.desc;
+
         var links = "";
         if (p.github)
           links +=
             '<a href="' +
             p.github +
             '" target="_blank" rel="noopener" class="btn-primary" style="background:' +
-            p.color +
-            ';color:#0a0a0a">GitHub ↗</a>';
+            activeColor +
+            ";color:" +
+            btnTextColor +
+            '">GitHub ↗</a>';
         if (p.demo)
           links +=
             '<a href="' +
             p.demo +
             '" target="_blank" rel="noopener" class="btn-ghost">Live Demo</a>';
         document.getElementById("modal-links").innerHTML = links;
+
         backdrop.classList.add("open");
         document.body.style.overflow = "hidden";
       }
