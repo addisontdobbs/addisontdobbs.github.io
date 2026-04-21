@@ -1085,9 +1085,27 @@
           <div class="project-arrow">↗</div>
         </div>
 
-        <!-- 04: Text Animation -->
+        <!-- 04: Mini Compiler -->
         <div class="project-card reveal reveal-delay-3" data-project="3">
           <div class="project-num">04</div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Flex</span
+              ><span class="project-tag">Bison</span
+              ><span class="project-tag">C</span
+              ><span class="project-tag">Compilers</span>
+            </div>
+            <div class="project-name">Mini Compiler</div>
+            <div class="project-desc">
+              A mini compiler built with Flex and Bison that processes user input through tokenization, parsing, and execution.
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- 05: Text Animation -->
+        <div class="project-card reveal" data-project="4">
+          <div class="project-num">05</div>
           <div class="project-info">
             <div class="project-tags">
               <span class="project-tag">JavaScript</span
@@ -1103,24 +1121,14 @@
           <div class="project-arrow">↗</div>
         </div>
 
+        <!-- 06: Coming Soon -->
         <div class="project-card coming-soon reveal reveal-delay-1">
-          <div class="project-num">05</div>
-          <div class="project-info">
-            <div class="coming-soon-badge">Coming Soon</div>
-            <div class="project-name">Next Project</div>
-            <div class="project-desc">
-              Something new is in the works. Check back soon.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card coming-soon reveal reveal-delay-2">
           <div class="project-num">06</div>
           <div class="project-info">
             <div class="coming-soon-badge">Coming Soon</div>
             <div class="project-name">Next Project</div>
             <div class="project-desc">
-              Another project on the horizon. Stay tuned.
+              Something new is in the works. Check back soon.
             </div>
           </div>
         </div>
@@ -1309,8 +1317,17 @@
           tags: ["C++", "Research", "Algorithms", "Systems"],
           color: "#b3d4ff",
           lightColor: "#1a4a99",
-          desc: "A simulation-based research project analyzing CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, MLFQ, and Stride), evaluating performance across metrics like wait time, turnaround time, and fairness under varying workloads. Conducted comparative analysis on scheduler behavior under a “quantum gap” condition, highlighting tradeoffs between efficiency and fairness.",
+          desc: "A simulation-based research project analyzing CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, MLFQ, and Stride), evaluating performance across metrics like wait time, turnaround time, and fairness under varying workloads. Conducted comparative analysis on scheduler behavior under a 'quantum gap' condition, highlighting tradeoffs between efficiency and fairness.",
           github: "https://github.com/addisontdobbs/CPU-Scheduling-Project",
+          demo: null,
+        },
+        {
+          name: "Mini Compiler",
+          tags: ["Flex", "Bison", "C", "Compilers"],
+          color: "#dda8ff",
+          lightColor: "#5a1a99",
+          desc: "A mini compiler built with Flex and Bison that processes user input through tokenization, parsing, and execution to simulate how real programming languages are interpreted. Implements a simplified compiler using Flex for lexical analysis and Bison for parsing, allowing raw user input to be converted into tokens, interpreted using grammar rules, and executed in real time. Supports arithmetic operations, advanced math functions, variables, and control flow constructs like if/else statements, loops, and switch cases. The system is structured across multiple components including a lexer, parser, main driver, and build system, closely mirroring how real compilers are organized.",
+          github: "https://github.com/addisontdobbs/Mini-Compiler-Project",
           demo: null,
         },
         {
