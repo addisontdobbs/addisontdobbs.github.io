@@ -940,9 +940,9 @@
       <div class="hero-eyebrow">Computer Science Student — Class of 2026</div>
       <h1 class="hero-title">Addison<br /><em>Dobbs.</em></h1>
       <p class="hero-sub">
-        Building clean, intuitive interfaces and web experiences. Passionate
-        about frontend development, software engineering, and turning complex ideas into usable
-        software.
+        Building software and data-driven applications that turn complex
+        information into useful tools. Focused on software engineering, 
+        data analysis, and full-stack development.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Work</a>
@@ -972,14 +972,13 @@
           <div class="section-title" style="margin-bottom: 28px">
             Turning ideas<br /><em
               style="font-style: italic; color: var(--accent)"
-              >into reality.</em
+              >into systems.</em
             >
           </div>
           <p>
             I'm a CS student at the
             <strong>University of Alaska Anchorage</strong>, working toward my
-            B.S. in Computer Science with a focus on frontend development and
-            software engineering.
+            B.S. in Computer Science with a focus on software engineering and full-stack development.
           </p>
           <p>
             I approach software as both a system and an experience. I care about
@@ -990,8 +989,8 @@
           </p>
           <p>
             Currently open to
-            <strong>internships and collaborative projects</strong> in web
-            development and programming.
+            <strong>full-time opportunities and collaborative projects</strong> in web
+            development and related technical roles.
           </p>
         </div>
         <div class="reveal reveal-delay-2">
@@ -1030,26 +1029,9 @@
         Projects<br />&amp; Research
       </div>
       <div class="projects-grid">
-        <!-- 01: Portfolio -->
-        <div class="project-card reveal" data-project="0">
-          <div class="project-num">01</div>
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="project-tag">HTML</span
-              ><span class="project-tag">CSS</span
-              ><span class="project-tag">JS</span>
-            </div>
-            <div class="project-name">Portfolio Website</div>
-            <div class="project-desc">
-              This site! A custom-built personal portfolio with animations,
-              dark/light theme switch, and clickable project modals.
-            </div>
-          </div>
-          <div class="project-arrow">↗</div>
-        </div>
 
-        <!-- 02: Earth Science Web App -->
-        <div class="project-card reveal reveal-delay-1" data-project="1">
+                <!-- 01: Earth Science Web App -->
+        <div class="project-card reveal reveal-delay-1" data-project="0">
           <div class="project-num">02</div>
           <div class="project-info">
             <div class="project-tags">
@@ -1067,26 +1049,28 @@
           </div>
           <div class="project-arrow">↗</div>
         </div>
-
-        <!-- 03: CPU Scheduling -->
-        <div class="project-card reveal reveal-delay-2" data-project="2">
-          <div class="project-num">03</div>
+        <!-- 02: Portfolio -->
+        <div class="project-card reveal" data-project="1">
+          <div class="project-num">01</div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="project-tag">C++</span
-              ><span class="project-tag">Research</span
-              ><span class="project-tag">Algorithms</span>
+              <span class="project-tag">HTML</span
+              ><span class="project-tag">CSS</span
+              ><span class="project-tag">JS</span>
             </div>
-            <div class="project-name">CPU Scheduling</div>
+            <div class="project-name">Portfolio Website</div>
             <div class="project-desc">
-              Research project implementing and benchmarking CPU scheduling algorithms under Quantum Gap Preemption.
+              This site! A custom-built personal portfolio with animations,
+              dark/light theme switch, and clickable project modals.
             </div>
           </div>
           <div class="project-arrow">↗</div>
         </div>
 
-        <!-- 04: Mini Compiler -->
-        <div class="project-card reveal reveal-delay-3" data-project="3">
+
+
+          <!-- 03: Mini Compiler -->
+        <div class="project-card reveal reveal-delay-3" data-project="2">
           <div class="project-num">04</div>
           <div class="project-info">
             <div class="project-tags">
@@ -1102,6 +1086,25 @@
           </div>
           <div class="project-arrow">↗</div>
         </div>
+
+        <!-- 04: CPU Scheduling -->
+        <div class="project-card reveal reveal-delay-2" data-project="3">
+          <div class="project-num">03</div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">C++</span
+              ><span class="project-tag">Research</span
+              ><span class="project-tag">Algorithms</span>
+            </div>
+            <div class="project-name">CPU Scheduling</div>
+            <div class="project-desc">
+              Research project implementing and benchmarking CPU scheduling algorithms under Quantum Gap Preemption.
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+      
 
         <!-- 05: Text Animation -->
         <div class="project-card reveal" data-project="4">
@@ -1162,7 +1165,7 @@
           <div class="timeline-desc">
             Pursuing a Bachelor of Science in Computer Science with a focus on
             frontend development and UI/UX design. Coursework includes data
-            structures, algorithms, databases, operating systems, and software
+            structures and algorithms, database systems, operating systems, and software
             engineering. Expected graduation: 2026.
           </div>
         </div>
@@ -1175,7 +1178,7 @@
         <div>
           <div class="section-label reveal">Contact</div>
           <div class="contact-big reveal reveal-delay-1">
-            Let's build<br />something.<br />
+            Let's<br />connect.<br />
           </div>
           <p
             class="reveal reveal-delay-2"
@@ -1187,7 +1190,7 @@
               max-width: 360px;
             "
           >
-            Open to internships, projects, and more. Usually respond within 24
+            Open to work, projects, and more. Usually respond within 24
             hours.
           </p>
         </div>
@@ -1295,6 +1298,15 @@
        */
       const projects = [
         {
+          name: "Earth Science Web App",
+          tags: ["Django", "PostgreSQL", "Leaflet.js", "Plotly"],
+          color: "#c9f0a8",
+          lightColor: "#2e6e10",
+          desc: "A full-stack research assistant project developed at the University of Alaska Anchorage. Designed and built a web-based application enabling earth scientists to collect field data through structured forms, store it in a PostgreSQL database, and visualize it through interactive Leaflet.js maps and Plotly charts. The app made spatial data exploration accessible to researchers and streamlined the data collection workflow.",
+          github: "https://github.com/addisontdobbs",
+          demo: null,
+        },
+        {
           name: "Portfolio Website",
           tags: ["HTML", "CSS", "JavaScript", "UI/UX"],
           color: "#a8e6cf",
@@ -1303,13 +1315,13 @@
           github: "https://github.com/addisontdobbs/addisontdobbs.github.io/",
           demo: null,
         },
-        {
-          name: "Earth Science Web App",
-          tags: ["Django", "PostgreSQL", "Leaflet.js", "Plotly", "Python"],
-          color: "#c9f0a8",
-          lightColor: "#2e6e10",
-          desc: "A full-stack research assistant project developed at the University of Alaska Anchorage. Designed and built a web-based application enabling earth scientists to collect field data through structured forms, store it in a PostgreSQL database, and visualize it through interactive Leaflet.js maps and Plotly charts. The app made spatial data exploration accessible to researchers and streamlined the data collection workflow.",
-          github: "https://github.com/addisontdobbs",
+         {
+          name: "Mini Compiler",
+          tags: ["Flex", "Bison", "C", "Compilers"],
+          color: "#dda8ff",
+          lightColor: "#5a1a99",
+          desc: "A mini compiler built with Flex and Bison that processes user input through tokenization, parsing, and execution to simulate how real programming languages are interpreted. Implements a simplified compiler using Flex for lexical analysis and Bison for parsing, allowing raw user input to be converted into tokens, interpreted using grammar rules, and executed in real time. Supports arithmetic operations, advanced math functions, variables, and control flow constructs like if/else statements, loops, and switch cases. The system is structured across multiple components including a lexer, parser, main driver, and build system, closely mirroring how real compilers are organized.",
+          github: "https://github.com/addisontdobbs/Mini-Compiler-Project",
           demo: null,
         },
         {
@@ -1319,15 +1331,6 @@
           lightColor: "#1a4a99",
           desc: "A simulation-based research project analyzing CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, MLFQ, and Stride), evaluating performance across metrics like wait time, turnaround time, and fairness under varying workloads. Conducted comparative analysis on scheduler behavior under a 'quantum gap' condition, highlighting tradeoffs between efficiency and fairness.",
           github: "https://github.com/addisontdobbs/CPU-Scheduling-Project",
-          demo: null,
-        },
-        {
-          name: "Mini Compiler",
-          tags: ["Flex", "Bison", "C", "Compilers"],
-          color: "#dda8ff",
-          lightColor: "#5a1a99",
-          desc: "A mini compiler built with Flex and Bison that processes user input through tokenization, parsing, and execution to simulate how real programming languages are interpreted. Implements a simplified compiler using Flex for lexical analysis and Bison for parsing, allowing raw user input to be converted into tokens, interpreted using grammar rules, and executed in real time. Supports arithmetic operations, advanced math functions, variables, and control flow constructs like if/else statements, loops, and switch cases. The system is structured across multiple components including a lexer, parser, main driver, and build system, closely mirroring how real compilers are organized.",
-          github: "https://github.com/addisontdobbs/Mini-Compiler-Project",
           demo: null,
         },
         {
